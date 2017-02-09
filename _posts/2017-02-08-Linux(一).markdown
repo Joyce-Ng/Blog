@@ -4,12 +4,13 @@
 
 —— Make you different everyday
 
+
 #### **shell是什么**
 
 > shell是用户与操作系统之间的桥梁，实现对Unix/Linux 操作系统及其内核的控制和操作
 > 如今，shell已经发展成为一种解释型编程语言
 
-#### 交互式shell与shell脚本文件
+* 交互式shell
 
 ```  
 //显示操作系统基本信息的shell命令
@@ -17,9 +18,11 @@ $ uname -a
 Darwin B000000080184C 15.5.0 Darwin Kernel Version 15.5.0: Tue Apr 19 18:36:36 PDT 2016; root:xnu-3248.50.21~8/RELEASE_X86_64 x86_64
 ```
 
+* shell脚本文件
+
 > shell脚本就是把多个shell命令按照一定的逻辑写到一个文件中，执行这样的脚本，就可以实现一部分工作的自动化了。
 
-#### 切换shell
+#### 查看，安装，切换shell
 
 > shell有哪些
 
@@ -48,7 +51,7 @@ $ echo $SHELL
 $ yum install zsh
 ```
 
-> 划重点了，下面两条就是切换shell的命令
+**划重点了，下面两条就是切换shell的命令**
 
 ```
 
