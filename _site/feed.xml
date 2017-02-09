@@ -3,11 +3,94 @@
   <channel>
     <title></title>
     <description>Actually, less is more!</description>
-    <link>http://localhost:4000/Blog/</link>
-    <atom:link href="http://localhost:4000/Blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 20 Jan 2017 12:20:33 +0800</pubDate>
-    <lastBuildDate>Fri, 20 Jan 2017 12:20:33 +0800</lastBuildDate>
+    <link>http://www.hifreud.com/Blog/</link>
+    <atom:link href="http://www.hifreud.com/Blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 08 Feb 2017 16:55:56 +0800</pubDate>
+    <lastBuildDate>Wed, 08 Feb 2017 16:55:56 +0800</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
+    
+      <item>
+        <title>Linux(一)</title>
+        <description>&lt;h2 id=&quot;linux-一&quot;&gt;Linux （一）&lt;/h2&gt;
+&lt;h3 id=&quot;shell&quot;&gt;Shell&lt;/h3&gt;
+&lt;p&gt;—— Make you different everyday&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;shell是什么&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;shell是用户与操作系统之间的桥梁，实现对Unix/Linux 操作系统及其内核的控制和操作
+如今，shell已经发展成为一种解释型编程语言&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;交互式shell与shell脚本文件&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//显示操作系统基本信息的shell命令
+$ uname -a
+Darwin B000000080184C 15.5.0 Darwin Kernel Version 15.5.0: Tue Apr 19 18:36:36 PDT 2016; root:xnu-3248.50.21~8/RELEASE_X86_64 x86_64
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;shell脚本就是把多个shell命令按照一定的逻辑写到一个文件中，执行这样的脚本，就可以实现一部分工作的自动化了。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;切换shell&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;shell有哪些&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;sh
+(t)chs
+ksh
+bash  MAC OS系统的默认shell
+zsh
+dash&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//查看当前系统安装了哪些shell
+$ cat /etc/shells
+
+/bin/bash
+/bin/csh
+/bin/ksh
+/bin/sh
+/bin/tcsh
+
+//显示系统当前所使用的shell
+$ echo $SHELL
+/bin/bash
+
+//安装shell
+$ yum install zsh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//划重点了，下面两条就是切换shell的命令
+
+//首先定位到zsh绝对路径
+$ which zsh
+/bin/zsh
+//使用-s 选项更改登录shell类型
+$ chsh -s /bin/zsh
+
+// 你以为就这样完了吗，chsh改变的是我们登陆shell的配置，我们必须退出再重新登陆shell
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Wed, 08 Feb 2017 00:00:00 +0800</pubDate>
+        <link>http://www.hifreud.com/Blog/2017/02/08/Linux(%E4%B8%80)/</link>
+        <guid isPermaLink="true">http://www.hifreud.com/Blog/2017/02/08/Linux(%E4%B8%80)/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Blogging_with_jekyll</title>
@@ -58,9 +141,10 @@
   &lt;li&gt;本地安装&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;pre&gt;&lt;code&gt;$ gem install jekyll bundler
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gem install jekyll bundler
 $ gem install jekyll-paginate
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Markdown相关&lt;/p&gt;
 
@@ -88,8 +172,9 @@ $ gem install jekyll-paginate
 
 &lt;p&gt;拷贝到本地git（username为你的Github账户名）&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ git clone https://github.com/username/myblog.git
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git clone https://github.com/username/myblog.git
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;以下两种方式均可&lt;/p&gt;
 
@@ -97,9 +182,10 @@ $ gem install jekyll-paginate
   &lt;li&gt;不使用主题模版&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;pre&gt;&lt;code&gt;$ jekyll new mysite           //创建一个jekyll文件夹
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ jekyll new mysite           //创建一个jekyll文件夹
 $ cd mysite
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;下载主题模板&lt;/a&gt;
@@ -108,24 +194,27 @@ $ cd mysite
 
 &lt;p&gt;此时目录结构为：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;/mysite
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/mysite
 　　　　|--　_config.yml
 　　　　|--　_posts
 　　　　|...
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;config.yml为设置文件，在_post文件夹里加入自己写的网页（.md文件）&lt;/p&gt;
 
 &lt;h4 id=&quot;第二步-创建一个没有父节点的分支gh-pages&quot;&gt;第二步 创建一个没有父节点的分支gh-pages&lt;/h4&gt;
 &lt;p&gt;（因为github规定，只有该分支中的页面，才会生成网页文件）&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ git checkout --orphan gh-pages
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git checkout --orphan gh-pages
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h4 id=&quot;第三步-修改名为_configyml的设置文件&quot;&gt;第三步 修改名为_config.yml的设置文件&lt;/h4&gt;
 
-&lt;pre&gt;&lt;code&gt;baseurl: &quot;/mysite/&quot;   //区分大小写
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;baseurl: &quot;/mysite/&quot;   //区分大小写
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h4 id=&quot;第四步-到_post文件夹下创建blog页面完成后执行jekyll&quot;&gt;第四步 到_post文件夹下创建blog页面，完成后执行jekyll&lt;/h4&gt;
 
@@ -133,35 +222,39 @@ $ cd mysite
   &lt;li&gt;写一个页面 (文件名必须为”年-月-日-文章标题.后缀名”的格式，可直接用 &lt;strong&gt;sublime&lt;/strong&gt; 编辑然后上传)&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;pre&gt;&lt;code&gt;~/mysite $ cd _post
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;~/mysite $ cd _post
 ~/_posts $ vim 2017-01-17-Hello-World.md 
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;在2017-01-17-Hello-World.md里编辑以下内容,然后保存&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;＃ Hello World
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;＃ Hello World
 &amp;gt; 你好，世界！  
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;此时目录结构为：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;/mysite
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/mysite
 　　　　|--　_config.yml
 　　　　|--　_posts
 　　　　|　　　|--　2017-01-17-Hello-World.md  //新增
        |...
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;ol&gt;
   &lt;li&gt;回到mysite，执行jekyll&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;pre&gt;&lt;code&gt;~/mysite $ bundle exec jekyll serve 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;~/mysite $ bundle exec jekyll serve 
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;回车后出现以下内容：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;B000000080184C:Blog $ bundle exec jekyll serve
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;B000000080184C:Blog $ bundle exec jekyll serve
 Configuration file: /Users/Blog/_config.yml
 Configuration file: /Users/Blog/_config.yml
             Source: /Users/Blog
@@ -174,12 +267,13 @@ Configuration file: /Users/Blog/_config.yml
     Server address: http://127.0.0.1:4000/username/      　//复制此url
   Server running... press ctrl-c to stop.
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;复制 Server address: http://127.0.0.1:4000/Joyce-Ng/，在浏览器中打开预览网站效果&lt;/p&gt;
 
 &lt;p&gt;此时目录结构为：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;/mysite
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/mysite
 　　　　|--　_config.yml
 　　　　|--　_posts
 　　　　|　　　|--　2017-01-17-Hello-World.md  
@@ -187,23 +281,26 @@ Configuration file: /Users/Blog/_config.yml
        |     |--　2017-01-17-Hello-World.html  //新增
        |...
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h4 id=&quot;第五步-发布内容&quot;&gt;第五步 发布内容&lt;/h4&gt;
 
-&lt;pre&gt;&lt;code&gt;$ git add .
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git add .
 $ git commit -m &quot;first post&quot;
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h4 id=&quot;第六步-将本地内容推送到github上刚创建的库&quot;&gt;第六步 将本地内容推送到github上刚创建的库&lt;/h4&gt;
 
-&lt;pre&gt;&lt;code&gt;$ git push -u origin gh-pages  //下一次推送则直接使用 git push
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git push -u origin gh-pages  //下一次推送则直接使用 git push
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;上传成功之后，访问http://username.github.io/mysite/就可以看到Blog已经生成了（将username换成你的用户名）。&lt;/p&gt;
 </description>
         <pubDate>Tue, 17 Jan 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/Blog/2017/01/17/blogging_with_jekyll/</link>
-        <guid isPermaLink="true">http://localhost:4000/Blog/2017/01/17/blogging_with_jekyll/</guid>
+        <link>http://www.hifreud.com/Blog/2017/01/17/blogging_with_jekyll/</link>
+        <guid isPermaLink="true">http://www.hifreud.com/Blog/2017/01/17/blogging_with_jekyll/</guid>
         
         
       </item>
@@ -234,7 +331,7 @@ $ git commit -m &quot;first post&quot;
   &lt;li&gt;感谢&lt;a href=&quot;http://lesscss.cn/&quot;&gt;Less官网&lt;/a&gt;的样式，本Jekyll框架的样式都是基于Less官网的样式直接拷贝过来的。只是重构了JS，并且加入了Jekyll语法而已。&lt;/li&gt;
   &lt;li&gt;感谢&lt;a href=&quot;https://github.com/&quot;&gt;Github&lt;/a&gt;提供的代码维护和发布平台&lt;/li&gt;
   &lt;li&gt;感谢&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;团队做出如此优秀的产品&lt;/li&gt;
-  &lt;li&gt;感谢&lt;a href=&quot;https://github.com/mattvh/solar-theme-jekyll&quot;&gt;Solar&lt;/a&gt;的原作者&lt;a href=&quot;http://www.webmaster-source.com/&quot;&gt;Matt Harzewski&lt;/a&gt;，在&lt;code&gt;2014.11&lt;/code&gt;-&lt;code&gt;2016.09&lt;/code&gt;的两年间，我的博客选用了此样式模版&lt;/li&gt;
+  &lt;li&gt;感谢&lt;a href=&quot;https://github.com/mattvh/solar-theme-jekyll&quot;&gt;Solar&lt;/a&gt;的原作者&lt;a href=&quot;http://www.webmaster-source.com/&quot;&gt;Matt Harzewski&lt;/a&gt;，在&lt;code class=&quot;highlighter-rouge&quot;&gt;2014.11&lt;/code&gt;-&lt;code class=&quot;highlighter-rouge&quot;&gt;2016.09&lt;/code&gt;的两年间，我的博客选用了此样式模版&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;使用&quot;&gt;使用&lt;/h1&gt;
@@ -247,18 +344,18 @@ $ git commit -m &quot;first post&quot;
 
 &lt;h2 id=&quot;配置&quot;&gt;配置&lt;/h2&gt;
 
-&lt;p&gt;&lt;code&gt;LessOrMore&lt;/code&gt;项目需要配置的只有一个文件&lt;code&gt;_config.yml&lt;/code&gt;，打开之后按照如下进行配置。&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;LessOrMore&lt;/code&gt;项目需要配置的只有一个文件&lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;，打开之后按照如下进行配置。&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;特别注意&lt;code&gt;baseurl&lt;/code&gt;的配置。如果是&lt;code&gt;***.github.io&lt;/code&gt;项目，不修改为空’‘的话，会导致JS,CSS等静态资源无法找到的错误&lt;/p&gt;
+  &lt;p&gt;特别注意&lt;code class=&quot;highlighter-rouge&quot;&gt;baseurl&lt;/code&gt;的配置。如果是&lt;code class=&quot;highlighter-rouge&quot;&gt;***.github.io&lt;/code&gt;项目，不修改为空’‘的话，会导致JS,CSS等静态资源无法找到的错误&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;name: 博客名称
 email: 邮箱地址
 author: 作者名
 url: 个人网站
-### baseurl修改为项目名，如果项目是&amp;#39;***.github.io&amp;#39;，则设置为空&amp;#39;&amp;#39;
-baseurl: &amp;quot;/LessOrMore&amp;quot;
+&lt;span class=&quot;c&quot;&gt;### baseurl修改为项目名，如果项目是'***.github.io'，则设置为空''&lt;/span&gt;
+baseurl: &lt;span class=&quot;s2&quot;&gt;&quot;/LessOrMore&quot;&lt;/span&gt;
 resume_site: 个人简历网站
 github: github地址
 github_username: github用户名称
@@ -272,22 +369,22 @@ FB:
 
 &lt;h2 id=&quot;如何写文章&quot;&gt;如何写文章&lt;/h2&gt;
 
-&lt;p&gt;在&lt;code&gt;LessOrMore/_posts&lt;/code&gt;目录下新建一个文件，可以创建文件夹并在文件夹中添加文件，方便维护。在新建文件中粘贴如下信息，并修改以下的&lt;code&gt;titile&lt;/code&gt;,&lt;code&gt;date&lt;/code&gt;,&lt;code&gt;categories&lt;/code&gt;,&lt;code&gt;tag&lt;/code&gt;的相关信息，添加&lt;code&gt;* content {:toc}&lt;/code&gt;为目录相关信息，在进行正文书写前需要在目录和正文之间输入至少2行空行。然后按照正常的Markdown语法书写正文。&lt;/p&gt;
+&lt;p&gt;在&lt;code class=&quot;highlighter-rouge&quot;&gt;LessOrMore/_posts&lt;/code&gt;目录下新建一个文件，可以创建文件夹并在文件夹中添加文件，方便维护。在新建文件中粘贴如下信息，并修改以下的&lt;code class=&quot;highlighter-rouge&quot;&gt;titile&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;date&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;categories&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;tag&lt;/code&gt;的相关信息，添加&lt;code class=&quot;highlighter-rouge&quot;&gt;* content {:toc}&lt;/code&gt;为目录相关信息，在进行正文书写前需要在目录和正文之间输入至少2行空行。然后按照正常的Markdown语法书写正文。&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;---
 layout: post
-#标题配置
+&lt;span class=&quot;c&quot;&gt;#标题配置&lt;/span&gt;
 title:  标题
-#时间配置
+&lt;span class=&quot;c&quot;&gt;#时间配置&lt;/span&gt;
 date:   2016-08-27 01:08:00 +0800
-#大类配置
+&lt;span class=&quot;c&quot;&gt;#大类配置&lt;/span&gt;
 categories: document
-#小类配置
+&lt;span class=&quot;c&quot;&gt;#小类配置&lt;/span&gt;
 tag: 教程
 ---
 
-* content
-{:toc}
+&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; content
+&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;:toc&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 
 
 我是正文。我是正文。我是正文。我是正文。我是正文。我是正文。&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
@@ -297,7 +394,7 @@ tag: 教程
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;jekyll server&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h2 id=&quot;效果&quot;&gt;效果&lt;/h2&gt;
-&lt;p&gt;打开浏览器并输入URL&lt;code&gt;http://localhost:4000/&lt;/code&gt;,回车。&lt;/p&gt;
+&lt;p&gt;打开浏览器并输入URL&lt;code class=&quot;highlighter-rouge&quot;&gt;http://localhost:4000/&lt;/code&gt;,回车。&lt;/p&gt;
 
 &lt;h1 id=&quot;为什么重复造轮子&quot;&gt;为什么重复造轮子&lt;/h1&gt;
 
@@ -325,8 +422,8 @@ tag: 教程
 &lt;p&gt;&lt;img src=&quot;/Blog/styles/images/weixin.png&quot; alt=&quot;微信二维码付款给Freud&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Sat, 27 Aug 2016 01:08:00 +0800</pubDate>
-        <link>http://localhost:4000/Blog/2016/08/27/how-to-use-this-jekyll-theme/</link>
-        <guid isPermaLink="true">http://localhost:4000/Blog/2016/08/27/how-to-use-this-jekyll-theme/</guid>
+        <link>http://www.hifreud.com/Blog/2016/08/27/how-to-use-this-jekyll-theme/</link>
+        <guid isPermaLink="true">http://www.hifreud.com/Blog/2016/08/27/how-to-use-this-jekyll-theme/</guid>
         
         <category>教程</category>
         
@@ -374,8 +471,8 @@ tag: 教程
 &lt;p&gt;深呼吸然后记住这只是一次谈话，面试官给你一个评价是很重要的，但是同样重要的是你也要给面试官一个评价，并且确认这是你想要工作的地方。&lt;/p&gt;
 </description>
         <pubDate>Sat, 20 Dec 2014 20:05:00 +0800</pubDate>
-        <link>http://localhost:4000/Blog/2014/12/20/I-ve-Interviewed-100s-of-Candidates-and-the-Ones-I-Hire-Always-Do-This/</link>
-        <guid isPermaLink="true">http://localhost:4000/Blog/2014/12/20/I-ve-Interviewed-100s-of-Candidates-and-the-Ones-I-Hire-Always-Do-This/</guid>
+        <link>http://www.hifreud.com/Blog/2014/12/20/I-ve-Interviewed-100s-of-Candidates-and-the-Ones-I-Hire-Always-Do-This/</link>
+        <guid isPermaLink="true">http://www.hifreud.com/Blog/2014/12/20/I-ve-Interviewed-100s-of-Candidates-and-the-Ones-I-Hire-Always-Do-This/</guid>
         
         <category>interview</category>
         
@@ -403,8 +500,8 @@ tag: 教程
 
 </description>
         <pubDate>Mon, 17 Nov 2014 13:31:01 +0800</pubDate>
-        <link>http://localhost:4000/Blog/2014/11/17/welcome-to-jekyll/</link>
-        <guid isPermaLink="true">http://localhost:4000/Blog/2014/11/17/welcome-to-jekyll/</guid>
+        <link>http://www.hifreud.com/Blog/2014/11/17/welcome-to-jekyll/</link>
+        <guid isPermaLink="true">http://www.hifreud.com/Blog/2014/11/17/welcome-to-jekyll/</guid>
         
         <category>jekyll</category>
         

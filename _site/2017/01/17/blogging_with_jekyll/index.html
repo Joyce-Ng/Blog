@@ -45,9 +45,10 @@
   <li>本地安装</li>
 </ul>
 
-<pre><code>$ gem install jekyll bundler
+<div class="highlighter-rouge"><pre class="highlight"><code>$ gem install jekyll bundler
 $ gem install jekyll-paginate
 </code></pre>
+</div>
 
 <p>Markdown相关</p>
 
@@ -75,8 +76,9 @@ $ gem install jekyll-paginate
 
 <p>拷贝到本地git（username为你的Github账户名）</p>
 
-<pre><code>$ git clone https://github.com/username/myblog.git
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git clone https://github.com/username/myblog.git
 </code></pre>
+</div>
 
 <p>以下两种方式均可</p>
 
@@ -84,9 +86,10 @@ $ gem install jekyll-paginate
   <li>不使用主题模版</li>
 </ol>
 
-<pre><code>$ jekyll new mysite           //创建一个jekyll文件夹
+<div class="highlighter-rouge"><pre class="highlight"><code>$ jekyll new mysite           //创建一个jekyll文件夹
 $ cd mysite
 </code></pre>
+</div>
 
 <ol>
   <li><a href="http://jekyllthemes.org/">下载主题模板</a>
@@ -95,24 +98,27 @@ $ cd mysite
 
 <p>此时目录结构为：</p>
 
-<pre><code>/mysite
+<div class="highlighter-rouge"><pre class="highlight"><code>/mysite
 　　　　|--　_config.yml
 　　　　|--　_posts
 　　　　|...
 </code></pre>
+</div>
 
 <p>config.yml为设置文件，在_post文件夹里加入自己写的网页（.md文件）</p>
 
 <h4 id="第二步-创建一个没有父节点的分支gh-pages">第二步 创建一个没有父节点的分支gh-pages</h4>
 <p>（因为github规定，只有该分支中的页面，才会生成网页文件）</p>
 
-<pre><code>$ git checkout --orphan gh-pages
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git checkout --orphan gh-pages
 </code></pre>
+</div>
 
 <h4 id="第三步-修改名为_configyml的设置文件">第三步 修改名为_config.yml的设置文件</h4>
 
-<pre><code>baseurl: "/mysite/"   //区分大小写
+<div class="highlighter-rouge"><pre class="highlight"><code>baseurl: "/mysite/"   //区分大小写
 </code></pre>
+</div>
 
 <h4 id="第四步-到_post文件夹下创建blog页面完成后执行jekyll">第四步 到_post文件夹下创建blog页面，完成后执行jekyll</h4>
 
@@ -120,35 +126,39 @@ $ cd mysite
   <li>写一个页面 (文件名必须为”年-月-日-文章标题.后缀名”的格式，可直接用 <strong>sublime</strong> 编辑然后上传)</li>
 </ol>
 
-<pre><code>~/mysite $ cd _post
+<div class="highlighter-rouge"><pre class="highlight"><code>~/mysite $ cd _post
 ~/_posts $ vim 2017-01-17-Hello-World.md 
 </code></pre>
+</div>
 
 <p>在2017-01-17-Hello-World.md里编辑以下内容,然后保存</p>
 
-<pre><code>＃ Hello World
+<div class="highlighter-rouge"><pre class="highlight"><code>＃ Hello World
 &gt; 你好，世界！  
 </code></pre>
+</div>
 
 <p>此时目录结构为：</p>
 
-<pre><code>/mysite
+<div class="highlighter-rouge"><pre class="highlight"><code>/mysite
 　　　　|--　_config.yml
 　　　　|--　_posts
 　　　　|　　　|--　2017-01-17-Hello-World.md  //新增
        |...
 </code></pre>
+</div>
 
 <ol>
   <li>回到mysite，执行jekyll</li>
 </ol>
 
-<pre><code>~/mysite $ bundle exec jekyll serve 
+<div class="highlighter-rouge"><pre class="highlight"><code>~/mysite $ bundle exec jekyll serve 
 </code></pre>
+</div>
 
 <p>回车后出现以下内容：</p>
 
-<pre><code>B000000080184C:Blog $ bundle exec jekyll serve
+<div class="highlighter-rouge"><pre class="highlight"><code>B000000080184C:Blog $ bundle exec jekyll serve
 Configuration file: /Users/Blog/_config.yml
 Configuration file: /Users/Blog/_config.yml
             Source: /Users/Blog
@@ -161,12 +171,13 @@ Configuration file: /Users/Blog/_config.yml
     Server address: http://127.0.0.1:4000/username/      　//复制此url
   Server running... press ctrl-c to stop.
 </code></pre>
+</div>
 
 <p>复制 Server address: http://127.0.0.1:4000/Joyce-Ng/，在浏览器中打开预览网站效果</p>
 
 <p>此时目录结构为：</p>
 
-<pre><code>/mysite
+<div class="highlighter-rouge"><pre class="highlight"><code>/mysite
 　　　　|--　_config.yml
 　　　　|--　_posts
 　　　　|　　　|--　2017-01-17-Hello-World.md  
@@ -174,16 +185,19 @@ Configuration file: /Users/Blog/_config.yml
        |     |--　2017-01-17-Hello-World.html  //新增
        |...
 </code></pre>
+</div>
 
 <h4 id="第五步-发布内容">第五步 发布内容</h4>
 
-<pre><code>$ git add .
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git add .
 $ git commit -m "first post"
 </code></pre>
+</div>
 
 <h4 id="第六步-将本地内容推送到github上刚创建的库">第六步 将本地内容推送到github上刚创建的库</h4>
 
-<pre><code>$ git push -u origin gh-pages  //下一次推送则直接使用 git push
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git push -u origin gh-pages  //下一次推送则直接使用 git push
 </code></pre>
+</div>
 
 <p>上传成功之后，访问http://username.github.io/mysite/就可以看到Blog已经生成了（将username换成你的用户名）。</p>
