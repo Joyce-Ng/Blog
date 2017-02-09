@@ -1,19 +1,17 @@
 <h2 id="linux-一">Linux （一）</h2>
+
 <h3 id="shell">Shell</h3>
+
 <p>—— Make you different everyday</p>
 
-<ol>
-  <li><strong>shell是什么</strong></li>
-</ol>
+<h4 id="shell是什么"><strong>shell是什么</strong></h4>
 
 <blockquote>
   <p>shell是用户与操作系统之间的桥梁，实现对Unix/Linux 操作系统及其内核的控制和操作
 如今，shell已经发展成为一种解释型编程语言</p>
 </blockquote>
 
-<ol>
-  <li>交互式shell与shell脚本文件</li>
-</ol>
+<h4 id="交互式shell与shell脚本文件">交互式shell与shell脚本文件</h4>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>//显示操作系统基本信息的shell命令
 $ uname -a
@@ -25,22 +23,20 @@ Darwin B000000080184C 15.5.0 Darwin Kernel Version 15.5.0: Tue Apr 19 18:36:36 P
   <p>shell脚本就是把多个shell命令按照一定的逻辑写到一个文件中，执行这样的脚本，就可以实现一部分工作的自动化了。</p>
 </blockquote>
 
-<ol>
-  <li>切换shell</li>
-</ol>
-
-<ul>
-  <li>shell有哪些</li>
-</ul>
+<h4 id="切换shell">切换shell</h4>
 
 <blockquote>
-  <p>sh
-(t)chs
-ksh
-bash  MAC OS系统的默认shell
-zsh
-dash</p>
+  <p>shell有哪些</p>
 </blockquote>
+
+<ul>
+  <li>sh</li>
+  <li>(t)chs</li>
+  <li>ksh</li>
+  <li>bash  MAC OS系统的默认shell</li>
+  <li>zsh</li>
+  <li>dash</li>
+</ul>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>//查看当前系统安装了哪些shell
 $ cat /etc/shells
@@ -60,14 +56,18 @@ $ yum install zsh
 </code></pre>
 </div>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>//划重点了，下面两条就是切换shell的命令
+<blockquote>
+  <p>划重点了，下面两条就是切换shell的命令</p>
+</blockquote>
 
+<div class="highlighter-rouge"><pre class="highlight"><code>
 //首先定位到zsh绝对路径
 $ which zsh
 /bin/zsh
 //使用-s 选项更改登录shell类型
 $ chsh -s /bin/zsh
 
-// 你以为就这样完了吗，chsh改变的是我们登陆shell的配置，我们必须退出再重新登陆shell
 </code></pre>
 </div>
+
+<p>你以为就这样完了吗，chsh改变的是我们登陆shell的配置，我们必须退出再重新登陆shell</p>

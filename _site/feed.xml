@@ -5,28 +5,26 @@
     <description>Actually, less is more!</description>
     <link>http://localhost:4000/Blog/</link>
     <atom:link href="http://localhost:4000/Blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 09 Feb 2017 11:28:17 +0800</pubDate>
-    <lastBuildDate>Thu, 09 Feb 2017 11:28:17 +0800</lastBuildDate>
+    <pubDate>Thu, 09 Feb 2017 11:49:48 +0800</pubDate>
+    <lastBuildDate>Thu, 09 Feb 2017 11:49:48 +0800</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
     
       <item>
         <title>Linux(一)</title>
         <description>&lt;h2 id=&quot;linux-一&quot;&gt;Linux （一）&lt;/h2&gt;
+
 &lt;h3 id=&quot;shell&quot;&gt;Shell&lt;/h3&gt;
+
 &lt;p&gt;—— Make you different everyday&lt;/p&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;shell是什么&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h4 id=&quot;shell是什么&quot;&gt;&lt;strong&gt;shell是什么&lt;/strong&gt;&lt;/h4&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;shell是用户与操作系统之间的桥梁，实现对Unix/Linux 操作系统及其内核的控制和操作
 如今，shell已经发展成为一种解释型编程语言&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;交互式shell与shell脚本文件&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h4 id=&quot;交互式shell与shell脚本文件&quot;&gt;交互式shell与shell脚本文件&lt;/h4&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//显示操作系统基本信息的shell命令
 $ uname -a
@@ -38,22 +36,20 @@ Darwin B000000080184C 15.5.0 Darwin Kernel Version 15.5.0: Tue Apr 19 18:36:36 P
   &lt;p&gt;shell脚本就是把多个shell命令按照一定的逻辑写到一个文件中，执行这样的脚本，就可以实现一部分工作的自动化了。&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;切换shell&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;shell有哪些&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h4 id=&quot;切换shell&quot;&gt;切换shell&lt;/h4&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;sh
-(t)chs
-ksh
-bash  MAC OS系统的默认shell
-zsh
-dash&lt;/p&gt;
+  &lt;p&gt;shell有哪些&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;sh&lt;/li&gt;
+  &lt;li&gt;(t)chs&lt;/li&gt;
+  &lt;li&gt;ksh&lt;/li&gt;
+  &lt;li&gt;bash  MAC OS系统的默认shell&lt;/li&gt;
+  &lt;li&gt;zsh&lt;/li&gt;
+  &lt;li&gt;dash&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//查看当前系统安装了哪些shell
 $ cat /etc/shells
@@ -73,17 +69,21 @@ $ yum install zsh
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//划重点了，下面两条就是切换shell的命令
+&lt;blockquote&gt;
+  &lt;p&gt;划重点了，下面两条就是切换shell的命令&lt;/p&gt;
+&lt;/blockquote&gt;
 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
 //首先定位到zsh绝对路径
 $ which zsh
 /bin/zsh
 //使用-s 选项更改登录shell类型
 $ chsh -s /bin/zsh
 
-// 你以为就这样完了吗，chsh改变的是我们登陆shell的配置，我们必须退出再重新登陆shell
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+
+&lt;p&gt;你以为就这样完了吗，chsh改变的是我们登陆shell的配置，我们必须退出再重新登陆shell&lt;/p&gt;
 </description>
         <pubDate>Wed, 08 Feb 2017 00:00:00 +0800</pubDate>
         <link>http://localhost:4000/Blog/2017/02/08/Linux(%E4%B8%80)/</link>
