@@ -27,12 +27,11 @@ FB:
   comments :
     provider : duoshuo
     duoshuo:
-        short_name : luoyan35714
+        short_name : Joyce Ng
     disqus :
-        short_name : freudkang
+        short_name : Joyce Ng
     # facebook :
     #   appid : 123
     #   num_posts: 5
     #   width: 580
     #   colorscheme: light
-
