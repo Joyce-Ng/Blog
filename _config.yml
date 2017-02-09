@@ -13,7 +13,6 @@ banner: 我爱学习，学习使我快乐。
 
 #permalink: /:categories/:year/:month/:day/:title/
 permalink: /:year/:month/:day/:title/
-relative_permalinks: true
 #gems: [jekyll-paginate, jekyll-gist]
 #paginate: 3
 
