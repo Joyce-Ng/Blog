@@ -26,9 +26,9 @@ FB:
   comments :
     provider : duoshuo
     duoshuo:
-        short_name : duoshuo
+        short_name : luoyan35714
     disqus :
-        short_name : disqus
+        short_name : freudkang
     # facebook :
     #   appid : 123
     #   num_posts: 5
